@@ -1,7 +1,9 @@
 <?php
 
+namespace Database\Seeders;
+
+use App\Models\SecurityQuestion;
 use Illuminate\Database\Seeder;
-use App\SecurityQuestion;
 
 class SecurityQuestionsSeeder extends Seeder
 {
