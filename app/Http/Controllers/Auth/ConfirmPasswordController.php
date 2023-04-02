@@ -62,7 +62,7 @@ class ConfirmPasswordController extends Controller
     {
         if ($request->input('security_answer')) {
             if (auth()->user()->security_answer != $request->input('security_answer')) {
-                return back()->withInput()->withErrors(['security_answer' => 'Sorry, wrong answer']);
+                return back()->withInput()->withErrors(['security_answer' => __('Sorry, wrong answer')]);
             }
         } else {
             $request->validate($this->rules(), $this->validationErrorMessages());

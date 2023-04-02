@@ -1,4 +1,4 @@
-# Laravel 9 安全提示問題
+# Laravel 10 安全提示問題
 
 安全提示問題是您容易記住但他人難以猜測的問題，可以使用安全提示問題以及其他識別資訊，確認您就是要求存取帳號的人。
 
@@ -20,9 +20,13 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以登入經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
@@ -30,8 +34,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/3P6KGLk.png)
+![](https://i.imgur.com/tsmifRI.png)
 > 安全提示問題是您很容易記住但其他人難以猜測的問題
 
-![](https://i.imgur.com/N6zX1g2.png)
+![](https://i.imgur.com/8KxPawe.png)
 > 系統將會要求您回答問題，才能繼續操作
