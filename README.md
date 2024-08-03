@@ -1,4 +1,4 @@
-# Laravel 10 安全提示問題
+# Laravel 11 安全提示問題
 
 安全提示問題是您容易記住但他人難以猜測的問題，可以使用安全提示問題以及其他識別資訊，確認您就是要求存取帳號的人。
 
@@ -29,13 +29,13 @@ $ npm install
 $ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以登入經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
+- 你可以經由 `/register` 來進行註冊。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/tsmifRI.png)
+![](https://i.imgur.com/PJltkcV.png)
 > 安全提示問題是您很容易記住但其他人難以猜測的問題
 
-![](https://i.imgur.com/8KxPawe.png)
+![](https://i.imgur.com/mw3U0EM.png)
 > 系統將會要求您回答問題，才能繼續操作

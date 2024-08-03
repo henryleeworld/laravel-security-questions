@@ -4,25 +4,25 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ ($securityQuestion) ? trans('security.security_question') : __('Confirm Password') }}</div>
+                <div class="card-header">{{ ($securityQuestion) ? __('Security Question') : __('Confirm Password') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.confirm') }}">
                         @csrf
 
                         @if ($securityQuestion)
-                            <b>{{ trans("security.question.{$securityQuestion->question}") }}</b>
-                            <br />
-                            <input id="security_answer" type="text" class="form-control @error('security_answer') is-invalid @enderror" name="security_answer" value="{{ old('security_answer') }}" required>
-                            @error('security_answer')
-                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                            @enderror
-                            <br />
-                            <button type="submit" class="btn btn-primary">
-                                {{ trans('security.confirm_answer') }}
-                            </button>
+                        <b>{{ __($securityQuestion->question) }}</b>
+                        <br />
+                        <input id="security_answer" type="text" class="form-control @error('security_answer') is-invalid @enderror" name="security_answer" value="{{ old('security_answer') }}" required>
+                        @error('security_answer')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        <br />
+                        <button type="submit" class="btn btn-primary">
+                            {{ __('Confirm Answer') }}
+                        </button>
                         @else
                         {{ __('Please confirm your password before continuing.') }}
                         <div class="row mb-3">

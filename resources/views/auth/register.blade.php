@@ -62,24 +62,25 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="security_question_id" class="col-md-4 col-form-label text-md-end">{{ trans('security.choose_security_question') }}</label>
+                            <label for="security_question_id" class="col-md-4 col-form-label text-md-end">{{ __('Choose Security Question') }}</label>
 
                             <div class="col-md-6">
                                 <select name="security_question_id" class="form-control">
                                     @foreach ($securityQuestions as $question)
-                                        <option value="{{ $question->id }}">{{ trans("security.question.{$question->question}") }}</option>
+                                        <option value="{{ $question->id }}">{{ __($question->question) }}</option>
                                     @endforeach
                                 </select>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="security_answer" class="col-md-4 col-form-label text-md-end">{{ trans('security.answer_to_that_question') }}</label>
+                            <label for="security_answer" class="col-md-4 col-form-label text-md-end">{{ __('Answer to that Question') }}</label>
 
                             <div class="col-md-6">
                                 <input id="security_answer" type="text" class="form-control" name="security_answer" required>
                             </div>
                         </div>
+
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
