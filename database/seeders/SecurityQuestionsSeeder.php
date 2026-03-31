@@ -8,11 +8,9 @@ use Illuminate\Database\Seeder;
 class SecurityQuestionsSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         SecurityQuestion::create(['question' => 'What was the street name you lived in as a child?']);
         SecurityQuestion::create(['question' => 'What primary school did you attend?']);

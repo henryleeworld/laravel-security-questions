@@ -4,17 +4,19 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = [
         'name',
@@ -27,7 +29,7 @@ class User extends Authenticatable
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $hidden = [
         'password',
@@ -47,8 +49,11 @@ class User extends Authenticatable
         ];
     }
 
-    public function securityQuestion()
+    /**
+     * Get the security question that owns the user.
+     */
+    public function securityQuestion(): BelongsTo
     {
-        return $this->belongsTo(SecurityQuestion::class, 'security_question_id');
+        return $this->belongsTo(SecurityQuestion::class);
     }
 }
