@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -80,7 +79,6 @@
                                 <input id="security_answer" type="text" class="form-control" name="security_answer" required>
                             </div>
                         </div>
-
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">

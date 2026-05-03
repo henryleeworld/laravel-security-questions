@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ConfirmsPasswords;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -42,7 +44,7 @@ class ConfirmPasswordController extends Controller
     /**
      * Display the password confirmation view.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function showConfirmForm()
     {
@@ -54,8 +56,7 @@ class ConfirmPasswordController extends Controller
     /**
      * Confirm the given user's password.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     * @return RedirectResponse|JsonResponse
      */
     public function confirm(Request $request)
     {

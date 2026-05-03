@@ -1,4 +1,4 @@
-# Laravel 12 安全提示問題
+# Laravel 13 安全提示問題
 
 安全提示問題是您容易記住但他人難以猜測的問題，可以使用安全提示問題以及其他識別資訊，確認您就是要求存取帳號的人。
 
@@ -34,8 +34,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/l0FnQSY.png)
+![](https://i.imgur.com/PcwuC7I.png)
 > 安全提示問題是您很容易記住但其他人難以猜測的問題
 
-![](https://i.imgur.com/eh6orCM.png)
+![](https://i.imgur.com/hXi2Qta.png)
 > 系統將會要求您回答問題，才能繼續操作
